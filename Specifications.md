@@ -94,7 +94,7 @@ The restaurant page will show a list of nearby restaurant with food surplus. Use
 
 **Figure 3: RESTAURANT Page**
 
-![Restaurant Page](imgs/RESTAURANT.png)
+![Restaurant Page](imgs/restaurant.png)
 
 Users can choose restaurants and food they offer based on personal needs. If the user scrolls to the bottom of the list, it will show "no more food waste for today".
 
@@ -138,7 +138,7 @@ If the cancellation is unsuccessful (for example, if the order is already being 
 ### Included In All Pages
 
 **Figure 5: Navigation Bar**  
-![Map Page Clicked](imgs/Navigation Bar.png)
+![Navigation Bar](imgs/NavigationBar.png)
 
 - **[Home]** – Browse local restaurants with surplus food near you  
 - **[Map]** – View locations and availability across Seattle  
@@ -147,4 +147,4 @@ If the cancellation is unsuccessful (for example, if the order is already being 
 - **[Profile]** – Login/Sign-Up  
 
 **Figure 6: Footer**  
-![Map Page Clicked](imgs/Footer.png)
+![Footer](imgs/Footer.png)
