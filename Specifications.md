@@ -104,7 +104,7 @@ Users can choose restaurants and food they offer based on personal needs. If the
 Users can filter restaurants to obtain results that match their preferences. The user has options to filter by dietary restrictions, price or by type of cuisine. It allows users to narrow down the restaurants that they need to look at before making a decision. 
 
 **Figure 3.2: RESTAURANT POP UP**
-![Filter Restaurant](imgs/restaurantpopup.png)
+![Filter Restaurant](imgs/Restaurantpopup.png)
 
 This pop-up displays all information about the restaurant. It includes the restaurant name, a small about description,address, cuisine type, dietary options, pickup time, and a button to place an order.
 
