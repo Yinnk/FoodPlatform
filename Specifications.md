@@ -148,3 +148,4 @@ If the cancellation is unsuccessful (for example, if the order is already being 
 
 **Figure 6: Footer**  
 ![Footer](imgs/Footer.png)
+Contains relevant details on our company like contact and socials. 
