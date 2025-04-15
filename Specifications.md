@@ -35,22 +35,6 @@ By leveraging **community-centered design** and **strategic transportation data*
 
 ## Design
 
-### Login and Sign-Up Pages
-
-The Login and Sign-Up Pages are central to user access and account creation for the app. These pages allow users to either log in to their existing account or create a new one to begin exploring and using the app's features, such as reserving mystery boxes, tracking orders, and customizing their dietary preferences.
-
-**Figure 6.1: Login Page on Initial Load**  
-![Login Page](imgs/LOGIN.png)
-
-Upon successful login, users are directed to the Home Page, and the My Orders Page will be updated appropriately for each user.
-
-**Figure 6.1: Sign-Up Page on Initial Load**  
-![Sign Up](imgs/SIGNUP.png)
-
-Upon successful sign-up, the user will receive a confirmation email and will be redirected to the Home Page.
-
----
-
 ### Home Page
 
 The Home page introduces users to our mission of fighting food insecurity by connecting local restaurants with surplus meals to communities in need. This landing page features a short explanation of our initiative, current restaurant partners, and a visual highlight of featured mystery boxes.
@@ -143,11 +127,34 @@ Once the user confirms the cancellation, a confirmation message will appear, let
 
 If the cancellation is unsuccessful (for example, if the order is already being prepared or picked up), an error message will appear, letting the user know that the order was not canceled and to try again.
 
+### Login and Sign-Up Pages
+
+The Login and Sign-Up Pages are central to user access and account creation for the app. These pages allow users to either log in to their existing account or create a new one to begin exploring and using the app's features, such as reserving mystery boxes, tracking orders, and customizing their dietary preferences.
+
+**Figure 5: Login Page on Initial Load**  
+![Login Page](imgs/LOGIN.png)
+
+Upon successful login, users are directed to the Home Page, and the My Orders Page will be updated appropriately for each user.
+
+**Figure 5.1: Sign-Up Page on Initial Load**  
+![Sign Up](imgs/SIGNUP.png)
+
+Upon successful sign-up, the user will receive a confirmation email and will be redirected to the Home Page.
+
 ---
+
+### My Account Page
+
+The My Account page provides users with an overview of their profile and account settings. It allows users to view and manage personal information such as their name and email address. This centralized page improves the user experience by making it easy to edit profile details, log out, or delete the account. Our stretch goal is to enable users to personalize their account experience.
+
+When the page loads, the user's profile information is displayed at the top, followed by action buttons at the bottom for logging out or deleting the account.
+
+**Figure 6: My Account Page On First Load**  
+![My Account](imgs/ACCOUNT.png)
 
 ### Included In All Pages
 
-**Figure 5: Navigation Bar**  
+**Figure 7: Navigation Bar**  
 ![Navigation Bar](imgs/NavigationBar.png)
 
 - **[Home]** – Browse local restaurants with surplus food near you  
@@ -156,7 +163,7 @@ If the cancellation is unsuccessful (for example, if the order is already being 
 - **[My Orders]** – Track and view your surprise boxes  
 - **[Profile]** – Login/Sign-Up  
 
-**Figure 6: Footer**  
+**Figure 8: Footer**  
 ![Footer](imgs/Footer.png)
 
 Contains relevant details on our company like contact and socials. 
