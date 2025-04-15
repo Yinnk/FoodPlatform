@@ -40,12 +40,12 @@ By leveraging **community-centered design** and **strategic transportation data*
 The Login and Sign-Up Pages are central to user access and account creation for the app. These pages allow users to either log in to their existing account or create a new one to begin exploring and using the app's features, such as reserving mystery boxes, tracking orders, and customizing their dietary preferences.
 
 **Figure 6.1: Login Page on Initial Load**  
-![Login Page](imgs/login.png)
+![Login Page](imgs/LOGIN.png)
 
 Upon successful login, users are directed to the Home Page, and the My Orders Page will be updated appropriately for each user.
 
 **Figure 6.1: Sign-Up Page on Initial Load**  
-![Sign Up](imgs/signup.png)
+![Sign Up](imgs/SIGNUP.png)
 
 Upon successful sign-up, the user will receive a confirmation email and will be redirected to the Home Page.
 
@@ -58,7 +58,7 @@ The Home page introduces users to our mission of fighting food insecurity by con
 Upon loading, users will see a clean layout that spotlights surprise box highlights and a “Get Started” button, followed by a mission statement and about us. Scrolling further shows our featured partners.
 
 **Figure 1: Home Page On First Load**  
-![Home Page](imgs/home.png)
+![Home Page](imgs/Home.png)
 
 Clicking on any featured restaurant takes users directly to that restaurant’s page, where they can learn more and place an order.
 
@@ -71,12 +71,12 @@ The Map page is a stretch goal designed to provide an interactive way for users 
 Upon page load, a map of Seattle appears, populated with clickable pinpoints. A filter button in the corner allows users to sort by cuisine type, dietary needs (vegan, gluten-free), and price range.
 
 **Figure 2: Map Page On First Load**  
-![Map Page](imgs/mappage.png)
+![Map Page](imgs/MAPPAGE.png)
 
 Clicking a pinpoint opens a preview popup with restaurant details and a button to view the full menu.
 
 **Figure 2.1: Map Page With Restaurant Popup**  
-![Map Page Clicked](imgs/mappageclicked.png)
+![Map Page Clicked](imgs/MAPPAGECLICKED.png)
 
 When the user clicks on a pinpoint, a pop-up with detailed information about the restaurant appears. This includes the restaurant’s name, address, cuisine type, surplus food details, dietary options, and a button to place an order.
 
