@@ -39,7 +39,7 @@ By leveraging **community-centered design** and **strategic transportation data*
 
 The Home page introduces users to our mission of fighting food insecurity by connecting local restaurants with surplus meals to communities in need. This landing page features a short explanation of our initiative, current restaurant partners, and a visual highlight of featured mystery boxes.
 
-Upon loading, users will see a clean layout that spotlights surprise box highlights and a “Get Started” button, followed by a mission statement and about us. Scrolling further shows our featured partners.
+Upon loading, users will see a clean layout that spotlights surprise box highlights and a “Explore Now” button, followed by a mission statement and about us. Scrolling further shows our featured partners.
 
 **Figure 1: Home Page On First Load**  
 ![Home Page](imgs/Home.png)
@@ -80,7 +80,7 @@ The restaurant page will show a list of nearby restaurant with food surplus. Use
 
 ![Restaurant Page](imgs/restaurant.png)
 
-Users can choose restaurants and food they offer based on personal needs. If the user scrolls to the bottom of the list, it will show "no more food waste for today".
+Users can choose restaurants and food they offer based on personal needs.
 
 **Figure 3.1: RESTAURANT FILTER**
 ![Filter Restaurant](imgs/FILTERRESTAURANT.png)
