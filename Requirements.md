@@ -1,6 +1,6 @@
 # Requirements
 
-## 🏠 Home Page
+## Home Page
 
 ### Section: Home Page Introduction
 - **1.1**: The home page must display the heading text: “Eat Well. Save Money. Reduce Waste.”
@@ -34,7 +34,7 @@
 
 ---
 
-## 🍴 Restaurant Pages
+## Restaurant Pages
 
 ### Section 1: Restaurant Page Display
 - **1.1**: When the user navigates to the restaurant page, the system must display a list of restaurant cards.
@@ -89,7 +89,7 @@
 
 ---
 
-## 🧳 My Orders
+## My Orders
 
 ### Section 1: My Orders Page
 - **1.1**: After the user clicks the “My Orders” button on the Navigation bar, it must take them to the My Orders page.
@@ -116,7 +116,7 @@
 
 ---
 
-## 🗺️ Map Pages
+## Map Pages
 
 ### Section: Map Page Display
 - **1.1**: The map must display highlighted service areas in color.
@@ -131,7 +131,7 @@
 
 ---
 
-## 🔑 Sign-Up/Login Page
+## Sign-Up/Login Page
 
 ### Section: Sign-Up/Login Page Interface
 - **1.1**: The sign-up page must display the heading text.
@@ -151,7 +151,7 @@
 
 ---
 
-## 📱 Navigation Bar
+## Navigation Bar
 
 - **1.1**: The navigation bar must include a website brand name.
 - **1.2**: The navigation bar must be visible on every page where navigation is required.
@@ -169,7 +169,7 @@
 
 ---
 
-## 🦶 Footer
+## Footer
 
 - **1.1**: The footer must be visible on every page of the application.
 - **1.2**: The footer must display the company name.
