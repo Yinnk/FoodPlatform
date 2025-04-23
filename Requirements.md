@@ -118,7 +118,7 @@
 
 ## Map Pages
 
-### Section: Map Page Display
+### Section 1: Map Page Display
 - **1.1**: The map must display highlighted service areas in color.
 - **1.2**: The map must have restaurant location pins within highlighted areas.
 - **1.3**: Users must be able to zoom in and out of the map.
@@ -133,12 +133,12 @@
 
 ## Sign-Up/Login Page
 
-### Section: Sign-Up/Login Page Interface
+### Section 1: Sign-Up/Login Page Interface
 - **1.1**: The sign-up page must display the heading text.
 - **1.2**: The sign-up page must display a subtitle instructing users what to do.
 - **1.3**: The sign-up page must include a Firebase authentication email UI.
 
-### Section: Sign-Up/Login Page Functionality
+### Section 2: Sign-Up/Login Page Functionality
 - **2.1**: Users must be able to enter an email and password in the FirebaseUI form.
 - **2.2**: Users must be able to confirm their password during sign-up.
 - **2.3**: The Firebase UI must validate that the "Confirm Password" field matches the "Password" field.
@@ -148,6 +148,16 @@
 - **2.7**: Upon successful sign-up, users must receive a confirmation message (e.g., "Account created successfully").
 - **2.8**: After successful sign-up or login, users must be redirected to the Home Page.
 - **2.9**: The sign-up page must include a button labeled “Go to Homepage” that redirects users to the Home Page if already signed in.
+
+### Section 3: Error States (Validation & Authentication)
+- **3.1**: If the email field is empty, an error message must appear: “Email is required.”
+- **3.2**: If the password field is empty, an error message must appear: “Password is required.”
+- **3.3**: If the confirm password field is empty during sign-up, an error message must appear: “Please confirm your password.”
+- **3.4**: If the email format is invalid (e.g., missing "@"), an error message must appear: “Please enter a valid email address.”
+- **3.5**: If the password and confirm password fields do not match, an error message must appear: “Passwords do not match.”
+- **3.6**: If authentication fails (e.g., incorrect password or non-existent user), Firebase must display an error message: “Incorrect email or password.”
+- **3.7**: If the email already exists in the system during sign-up, Firebase must display an error message: “An account with this email already exists.”
+- **3.8**: All error messages must be visible next to or below the relevant form fields for clarity.
 
 ---
 
