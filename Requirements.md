@@ -2,7 +2,7 @@
 
 ## Home Page
 
-### Section: Home Page Introduction
+### Section 1: Home Page Introduction
 - **1.1**: The home page must display the heading text: “Eat Well. Save Money. Reduce Waste.”
 - **1.2**: The home page must include a short paragraph explaining the app’s mission to help users discover and reserve surplus meals from local restaurants.
 - **1.3**: The home page must include a button labeled “Explore Now.”
@@ -11,23 +11,23 @@
 - **1.6**: The popup must have a button directing the user to sign in.
 - **1.7**: The popup must have an “X” option to close the popup as well.
 
-### Section: Featured Restaurants
+### Section 2: Featured Restaurants
 - **2.1**: The home page must display at least three featured restaurants at once.
 - **2.2**: Each featured restaurant must display a restaurant name, meal title, price, and a short description.
 - **2.3**: Stretch goal: each featured restaurant card must include a button or arrow to view more restaurant options.
 - **2.4**: Clicking on a featured restaurant must redirect the user to the individual restaurant’s detail page.
 
-### Section: Our Mission
+### Section 3: Our Mission
 - **3.1**: The home page must display a section titled “Our Mission.”
 - **3.2**: The mission section must include a paragraph describing the app’s goal to make surplus food accessible and reduce food waste.
 - **3.3**: The mission section must include at least one image related to fresh food or sustainability.
 
-### Section: About Us
+### Section 4: About Us
 - **4.1**: The home page must display a section titled “About Us.”
 - **4.2**: The About Us section must describe the organization's origin, purpose, and how the platform works.
 - **4.3**: The About Us section must include at least one image, such as a landmark (e.g., the Seattle Space Needle).
 
-### Section: Partner Logos
+### Section 5: Partner Logos
 - **5.1**: The home page must display a section titled “Meet the Partners Making It Possible.”
 - **5.2**: The partner section must display logos from at least two distinct partners.
 - **5.3**: Each partner logo must be visually distinct.
