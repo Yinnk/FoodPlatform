@@ -1,19 +1,21 @@
 import { useState } from 'react'
 import './App.css'
+import { MySignInScreen } from './components/UserAuth.jsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        hello!
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+ 
+    return (
+      <BrowserRouter>
+        <Routes>
+        <Route path="/" element={<h1>Homepage</h1>} />
+        <Route path="/signin" element={<MySignInScreen />} />        
+        </Routes>
+      </BrowserRouter>
+    );
+  
 }
-
-export default App
+export default App;
