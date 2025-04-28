@@ -258,4 +258,25 @@
 
 2. Click the "Sign-Out" button.  
    - Expect a popup indicating the user has successfully logged out. (Requirement 1.13, **Section: Navigation Bar**)  
-   - Expect to be redirected to the Home Page. (Requirement 1.13, **Section: Navigation Bar**)  
+   - Expect to be redirected to the Home Page. (Requirement 1.13, **Section: Navigation Bar**)
+
+
+## **Non-Functional Requirements**
+
+### Context: Accessibility
+
+1. **Action**: Test contrast ratios of all text elements using the WebAIM Contrast Checker.  
+   - **Expected Result**: All text elements meet WCAG AA or AAA standards for contrast.  
+
+2. **Action**: Test screen reader navigation across the application.  
+   - **Expected Result**: All interactive elements are properly labeled and accessible via the screen reader. The application is fully navigable without visual assistance.  
+
+---
+
+### Context: Usability
+
+1. **Action**: Test keyboard navigation throughout the application.  
+   - **Expected Result**: All interactive elements are focusable and operable using the keyboard. The focus indicator is clearly visible on all elements.  
+
+2. **Action**: Test responsiveness of the application across different screen sizes.  
+   - **Expected Result**: The layout adjusts appropriately without breaking functionality or design. All text and interactive elements remain accessible and usable.    
