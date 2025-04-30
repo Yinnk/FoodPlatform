@@ -3,8 +3,7 @@ import { getAuth, EmailAuthProvider, GoogleAuthProvider } from 'firebase/auth'
 import React, { useState } from 'react';
 import { auth } from '../index.js'; //import the auth object 
 import { useNavigate } from 'react-router-dom'; //import the useNavigate hook
-
-
+import './UserAuth.css';
 //import the component -- pick one!
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'; //install option 1
 
@@ -42,7 +41,9 @@ const firebaseUIConfig = {
 
 
   return (
-<div>
+<div className='auth-page'>
+  <div className="sign-in-screen">
+    <div className="auth-content">
       {isSignedIn ? (
         <>
           <h1>Success!</h1>
@@ -63,8 +64,14 @@ const firebaseUIConfig = {
 
       {isSignedIn && (
         <button onClick={handleGoHome} style={{ marginTop: '20px' }}>
-          Go to Home Page
+         Go to Homepage
         </button>
       )}
+    </div>
+    
+      <div className="image-panel">
+        <img src="./public/img/food.webp"></img>
+        </div>
+        </div>
     </div>  
     );}
