@@ -1,0 +1,83 @@
+.modal-dialog, .modal {
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+    border: none;
+  }
+  
+  .card-divider {
+    border: none;
+    height: 10px;
+    opacity: 1;
+    background-color: #061A40; /* dark blue or whatever color fits your theme */
+    margin: 0; /* remove default spacing if needed */
+  }
+
+  .modal-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain; /* Keeps aspect ratio */
+    margin-right: 1rem; /* Space between icon and text */
+  }
+  
+  .list-group-item {
+    border: none !important;
+    padding: 1rem;
+    color:#003559;
+  }
+  
+  .modal-header {
+    border: none;  
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0;
+    padding-top: 1rem;
+}
+
+.modal-header h5 {
+    font-weight: lighter;
+    font-size: 1.2rem;
+
+}
+
+.btn-order{
+    background-color:#003559
+
+}
+
+h2, h3{
+    color: #003559;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1.2rem;
+}
+
+p{
+    color: #003559;
+    font-size: 1rem;
+}
+
