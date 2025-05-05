@@ -1,4 +1,4 @@
-const restaurants = [
+export const restaurants = [
     {
       name: "Spice Bridge",
       type: "Food Hall",
