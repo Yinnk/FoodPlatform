@@ -1,52 +1,16 @@
-body, html, #root {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #BAD7F2; 
-  }
-  
-  h1{
-    color: #061A40;
-    font-size: 78px;
+body, html, #root, .container-fluid {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #BAD7F2; 
 }
 
-  p {
-    color: #003559;
-    font-size: 22px;
-  }
-
-  .auth-page{
-    display:flex;
-    height:100vh
-  }
-
-  .sign-in-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* full viewport height */
-  }
-
-.auth-content {
-  text-align: center;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 400px;
-  width: 100%;
+h1{
+  color: #061A40;
+  font-size: 78px;
 }
 
-.image-panel, .auth {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    padding-left: 150px;
-  }
-  
-  .image-panel img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-  }
+p {
+  color: #003559;
+  font-size: 22px;
+}
