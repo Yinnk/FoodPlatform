@@ -15,7 +15,8 @@ function App() {
         <Route path="/" element={<h1>Homepage</h1>} />
         <Route path="/signin" element={<MySignInScreen />} /> 
         <Route path="/card" element={<CardGrid />} />   
-        <Route path="/restaurantpage" element={<RestaurantPage />} />     
+        <Route path="/restaurantpage" element={<RestaurantPage />} />    
+        <Route path="/orderpage" element={<h1>Order Page</h1>} />
         </Routes>
       </BrowserRouter>
     );
