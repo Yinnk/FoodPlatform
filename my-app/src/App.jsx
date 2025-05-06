@@ -14,9 +14,9 @@ function App() {
         <Routes>
         <Route path="/" element={<h1>Homepage</h1>} />
         <Route path="/signin" element={<MySignInScreen />} /> 
-        <Route path="/card" element={<CardGrid />} />   
+        <Route path="/card" element={<CardGrid />} />   {/* should be removed after developing */}
         <Route path="/restaurantpage" element={<RestaurantPage />} />    
-        <Route path="/orderpage" element={<h1>Order Page</h1>} />
+        <Route path="/orderpage" element={<h1>Order Page</h1>} />{/* place holder for order page */}
         </Routes>
       </BrowserRouter>
     );

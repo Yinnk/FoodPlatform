@@ -3,7 +3,6 @@ import {restaurants} from '../data/Restaurant.js';
 import React from 'react';
 
 export function CardGrid({onCardClick}) {
-  console.log("restaurants", restaurants);
 
   return (
   <div className="container mt-4">
