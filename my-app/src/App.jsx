@@ -2,20 +2,24 @@ import { useState } from 'react'
 import './App.css'
 import { MySignInScreen } from './components/UserAuth.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import { HomePage } from './components/HomePage';
+import { RestaurantCard } from './components/RestaurantCard.jsx';
+import { CardGrid } from './components/CardGrid.jsx';
+import  {RestaurantPage} from './components/RestaurantPage.jsx';
 
 
 function App() {
 
- 
-    return (
-      <BrowserRouter>
-        <Routes>
-        <Route path="/" element={<h1>Homepage</h1>} />
-        <Route path="/signin" element={<MySignInScreen />} />        
-        </Routes>
-      </BrowserRouter>
-    );
-  
-}
+
+   return (
+     <BrowserRouter>
+       <Routes>
+       <Route path="/" element={<HomePage />} />
+       <Route path="/signin" element={<MySignInScreen />} /> 
+       <Route path="/card" element={<CardGrid />} />  
+       <Route path="/restaurantpage" element={<RestaurantPage />} />      
+       </Routes>
+     </BrowserRouter>
+   );
+ }
 export default App;
