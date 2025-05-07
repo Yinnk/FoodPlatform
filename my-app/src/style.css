@@ -117,6 +117,18 @@
     max-width: 100%;
     height: auto;
   }
+
+  .restaurant-hero {
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+
+  .restaurant-hero-content {
+    max-width: 100rem;
+    margin-left: 0;
+    text-align: left;
+
+  }
   
   /* Featured Restaurants */
   .featured {
