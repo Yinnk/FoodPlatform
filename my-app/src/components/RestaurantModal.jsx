@@ -1,18 +1,19 @@
 import React from 'react';
-import './Modal.css';
-import locationIcon from '/assets/img/location.png';
-import glutenfreeIcon from '/assets/img/glutenfree.png';
-import veganIcon from '/assets/img/vegan.png';
-import halalIcon from '/assets/img/halal-sign.png';
-import nutfreeIcon from '/assets/img/walnut.png';
-import foodSurplusIconOrange from '/assets/img/star.png';
-import foodSurplusIconGreen from '/assets/img/stargreen.png';
-import foodSurplusIconRed from '/assets/img/starred.png';
-import clock from '/assets/img/clock.png';
+import './restaurant-modal.css';
+import locationIcon from '../assets/img/location.png';
+import glutenfreeIcon from '../assets/img/glutenfree.png';
+import veganIcon from '../assets/img/vegan.png';
+import halalIcon from '../assets/img/halal-sign.png';
+import nutfreeIcon from '../assets/img/walnut.png';
+import foodSurplusIconOrange from '../assets/img/star.png';
+import foodSurplusIconGreen from '../assets/img/stargreen.png';
+import foodSurplusIconRed from '../assets/img/starred.png';
+import clock from '../assets/img/clock.png';
 
 //food surplus star icon color doesn't match the desired color now; need to find new correct color icon
 
-export function RestaurantDetailModal({ restaurant, show, onClose }) {
+export function RestaurantDetailModal({ restaurant, show, onClose, onOrderConfirm }) {
+
     if (!show) return null;
 
     const foodSurplusIconMap = {
@@ -20,6 +21,7 @@ export function RestaurantDetailModal({ restaurant, show, onClose }) {
         Medium: foodSurplusIconOrange,
         Low: foodSurplusIconGreen,
     };
+
 
     return (
         <div className="modal show d-block" tabIndex="-1" role="dialog">
@@ -91,11 +93,15 @@ export function RestaurantDetailModal({ restaurant, show, onClose }) {
                     </div>
 
                     <div className="modal-footer">
-                        <button className="btn btn-order btn-primary" onClick={() => alert('Order placed!')}>ORDER NOW</button> {/* This button should trigger order confirmation modal. right now it's a placeholder */}
+
+                        <button className="btn btn-order btn-primary" onClick={() => onOrderConfirm(restaurant)}>ORDER NOW</button> {/* This button should trigger order confirmation modal. right now it's a placeholder */}
+
                     </div>
 
                 </div>
             </div>
         </div>
     );
+
 }
+

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { MySignInScreen } from './components/UserAuth.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import { HomePage } from './components/HomePage';
 import { RestaurantCard } from './components/RestaurantCard.jsx';
 import { CardGrid } from './components/CardGrid.jsx';
@@ -17,9 +18,11 @@ function App() {
        <Route path="/" element={<HomePage />} />
        <Route path="/signin" element={<MySignInScreen />} /> 
        <Route path="/card" element={<CardGrid />} />  
-       <Route path="/restaurantpage" element={<RestaurantPage />} />      
+       <Route path="/restaurantpage" element={<RestaurantPage />} />   
+        <Route path="/orderpage" element={<h1>Order Page</h1>} />{/* place holder for order page */}
        </Routes>
      </BrowserRouter>
    );
  }
+
 export default App;

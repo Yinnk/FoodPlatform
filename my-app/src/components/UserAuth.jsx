@@ -2,7 +2,7 @@ import { getAuth, EmailAuthProvider, GoogleAuthProvider } from 'firebase/auth'
 import React, { useState } from 'react';
 import { auth } from '../index.js'
 import { useNavigate } from 'react-router-dom'; 
-import './UserAuth.css';
+import './user-auth.css';
 
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'; 
 

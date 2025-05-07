@@ -1,9 +1,8 @@
 import { RestaurantCard } from './RestaurantCard.jsx';
-import {restaurants} from '/data/Restaurant.js';
+import {restaurants} from '../data/Restaurant.js';
 import React from 'react';
 
 export function CardGrid({onCardClick}) {
-  console.log("restaurants", restaurants);
 
   return (
   <div className="container mt-4">
@@ -16,4 +15,6 @@ export function CardGrid({onCardClick}) {
       </div>
     </div>
       );
+
 }
+

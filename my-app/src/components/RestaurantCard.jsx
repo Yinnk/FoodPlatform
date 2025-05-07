@@ -1,9 +1,9 @@
-import { useNavigate } from 'react-router-dom'; //import the useNavigate hook
+import { useNavigate } from 'react-router-dom'; 
 import React, { useState } from 'react';
-import './RestaurantCard.css'; //import the css file
+import './restaurant-card.css';
 
 export function RestaurantCard ({restaurant, onClick}) {
-    console.log("Card rendered:", restaurant.name);
+
     return (
         <div className="card h-100" onClick={() => {
             console.log("Card clicked:", restaurant.name);
@@ -19,4 +19,6 @@ export function RestaurantCard ({restaurant, onClick}) {
         </div>
     );
 
+
 }
+
