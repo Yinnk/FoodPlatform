@@ -15,4 +15,6 @@ export function CardGrid({onCardClick}) {
       </div>
     </div>
       );
+
 }
+

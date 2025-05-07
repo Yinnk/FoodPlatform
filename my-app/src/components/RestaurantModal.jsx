@@ -13,6 +13,7 @@ import clock from '../assets/img/clock.png';
 //food surplus star icon color doesn't match the desired color now; need to find new correct color icon
 
 export function RestaurantDetailModal({ restaurant, show, onClose, onOrderConfirm }) {
+
     if (!show) return null;
 
     const foodSurplusIconMap = {
@@ -22,8 +23,6 @@ export function RestaurantDetailModal({ restaurant, show, onClose, onOrderConfir
     };
 
 
-
-    
     return (
         <div className="modal show d-block" tabIndex="-1" role="dialog">
             <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable shadow-sm" role="document">
@@ -94,11 +93,15 @@ export function RestaurantDetailModal({ restaurant, show, onClose, onOrderConfir
                     </div>
 
                     <div className="modal-footer">
+
                         <button className="btn btn-order btn-primary" onClick={() => onOrderConfirm(restaurant)}>ORDER NOW</button> {/* This button should trigger order confirmation modal. right now it's a placeholder */}
+
                     </div>
 
                 </div>
             </div>
         </div>
     );
+
 }
+

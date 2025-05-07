@@ -19,4 +19,6 @@ export function RestaurantCard ({restaurant, onClick}) {
         </div>
     );
 
+
 }
+
