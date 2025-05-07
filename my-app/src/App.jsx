@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HomePage } from './components/HomePage';
 import { RestaurantCard } from './components/RestaurantCard.jsx';
 import { CardGrid } from './components/CardGrid.jsx';
-import  {RestaurantPage} from './components/RestaurantPage.jsx';
+import  {RestaurantPage} from './pages/RestaurantPage.jsx';
 
 
 function App() {

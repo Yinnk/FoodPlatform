@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { CardGrid } from "../components/CardGrid.jsx";
 import { RestaurantDetailModal } from "../components/RestaurantModal.jsx";
 import { OrderConfirmationModal } from "../components/OrderConfirmationModal.jsx";
+import Navbar from '../components/Navbar'; 
+import Footer from '../components/Footer';
+import RestaurantHero from '../components/RestaurantHero.jsx';
+
 
 export function RestaurantPage() {
     const [selectedRestaurant, setSelectedRestaurant] = useState(null);
@@ -27,6 +31,8 @@ export function RestaurantPage() {
 
     return (
         <div>
+            <Navbar />
+             <RestaurantHero />
             {/* Pass handleCardClick function to CardGrid */}
             <CardGrid onCardClick={handleCardClick} />
             
@@ -48,7 +54,7 @@ export function RestaurantPage() {
                     show={showConfirmlModal}
                     onClose={() => setShowConfirmModal(false)}
                 />
-
+             <Footer />
         </div>
     );
 }
