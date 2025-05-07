@@ -1,0 +1,16 @@
+body, html, #root, .container-fluid {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #BAD7F2; 
+}
+
+h1{
+  color: #061A40;
+  font-size: 78px;
+}
+
+p {
+  color: #003559;
+  font-size: 22px;
+}
