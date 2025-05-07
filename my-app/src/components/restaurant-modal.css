@@ -132,17 +132,18 @@ button {
   transition: border-color 0.25s;
 }
 
-button:hover {
-  border-color: #646cff;
-}
-
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
 .btn-order {
-  background-color: #e0efff;
+  background-color: #0c1c3d;
+  border: none;
+}
+
+.btn-order:hover {
+  background-color: #a2bef7
 }
 
 /* MODAL STYLES */
@@ -197,7 +198,7 @@ button:focus-visible {
   border: none;
   height: 10px;
   opacity: 1;
-  background-color: #e0efff;;
+  background-color: #061A40;
   margin: 0;
 }
 

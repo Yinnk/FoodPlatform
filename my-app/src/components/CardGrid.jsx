@@ -5,7 +5,7 @@ import React from 'react';
 export function CardGrid({onCardClick}) {
 
   return (
-  <div className="container mt-4">
+  <div className="container mt-4 ">
       <div className="row g-4 m-3">
         {restaurants.map((restaurant, index) => (
           <div key={index} className="col-12 col-md-6 mb-4">

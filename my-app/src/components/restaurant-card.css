@@ -4,7 +4,7 @@
     object-fit: cover; 
   }
 
-  .card-divider {
+  .card .card-divider {
     border: none;
     height: 10px;
     opacity: 1;

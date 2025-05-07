@@ -6,7 +6,7 @@
 
   .card-divider {
     border: none;
-    height: 10px;
+    height: 10px;    
     opacity: 1;
     background-color: #061A40; /* dark blue or whatever color fits your theme */
     margin: 0; /* remove default spacing if needed */

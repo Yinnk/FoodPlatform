@@ -38,15 +38,16 @@
 }
 
 .btn-view-order{
-    background-color:#003559
-
+    background-color:#003559;
+    border: none;
 }
+
 
 
 .confirmation-text{
     color: #003559;
     font-size: 1rem;
     font-weight: normal;
-    text-align: centers;
+    text-align: center;
 }
 
