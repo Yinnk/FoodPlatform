@@ -1,11 +1,12 @@
 import React from 'react';
+import './restaurant-hero.css'; 
 
 const RestaurantHero = () => {
   return (
     <section className="restaurant-hero">
       <div className="restaurant-hero-content">
         <h1>Discover Local Flavors,<br />One Surprise At A Time</h1>
-        <h3>AFFORDABLE MEALS. LOCAL SUPPORT. LESS WASTE.</h3>
+        <h2>AFFORDABLE MEALS. LOCAL SUPPORT. LESS WASTE.</h2>
         <p>
           Explore surprise meal boxes from Seattle’s favorite local restaurants—
           all at discounted prices. Our mission is to make good food more accessible to 

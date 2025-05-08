@@ -1,3 +1,4 @@
+/*
 .modal-dialog, .modal {
     top: 0;
     left: 0;
@@ -22,8 +23,8 @@
     border: none;
     height: 10px;
     opacity: 1;
-    background-color: #061A40; /* dark blue or whatever color fits your theme */
-    margin: 0; /* remove default spacing if needed */
+    background-color: #061A40; 
+    margin: 0;
   }
 
   .modal-img {
@@ -36,8 +37,8 @@
   .icon {
     width: 24px;
     height: 24px;
-    object-fit: contain; /* Keeps aspect ratio */
-    margin-right: 1rem; /* Space between icon and text */
+    object-fit: contain; 
+    margin-right: 1rem; 
   }
   
   .list-group-item {
@@ -80,3 +81,5 @@ p{
     color: #003559;
     font-size: 1rem;
 }
+    
+*/
