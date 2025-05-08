@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { MySignInScreen } from './components/UserAuth.jsx'
+import { SignInPage } from './pages/SignInPage.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { HomePage } from './pages/HomePage.jsx';
@@ -16,7 +16,7 @@ function App() {
      <BrowserRouter>
        <Routes>
        <Route path="/" element={<HomePage />} />
-       <Route path="/signin" element={<MySignInScreen />} /> 
+       <Route path="/signin" element={<SignInPage />} /> 
        <Route path="/card" element={<CardGrid />} />  
        <Route path="/restaurantpage" element={<RestaurantPage />} />   
         <Route path="/orderpage" element={<h1>Order Page</h1>} />{/* place holder for order page */}
