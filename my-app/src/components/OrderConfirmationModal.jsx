@@ -13,7 +13,7 @@ export function OrderConfirmationModal({ order, show, onClose }) {
     
     return (
         <div className="modal show d-block" tabIndex="-1" role="dialog">
-            <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable shadow-sm modal-sm" role="document">
+            <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm" role="document">
                 <div className="modal-content ">
                     <div className="modal-header">
                         <button type="button" className="btn-close" onClick={onClose}></button>
