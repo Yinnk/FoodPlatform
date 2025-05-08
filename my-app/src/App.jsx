@@ -3,7 +3,7 @@ import './App.css'
 import { MySignInScreen } from './components/UserAuth.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { HomePage } from './components/HomePage';
+import { HomePage } from './pages/HomePage.jsx';
 import { RestaurantCard } from './components/RestaurantCard.jsx';
 import { CardGrid } from './components/CardGrid.jsx';
 import  {RestaurantPage} from './pages/RestaurantPage.jsx';

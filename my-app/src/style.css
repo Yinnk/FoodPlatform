@@ -11,7 +11,7 @@
     background-color: #ffffff;
   }
   
- 
+ /*Navebar*/
   .navbar {
     background: #fff;
     padding: 1rem 2rem;
@@ -46,40 +46,6 @@
     margin-left: 1rem;
   }
   
-  /* Hero Section */
-  .hero {
-    display: flex;
-    align-items: center;
-    padding: 4rem 2rem;
-    background: #d9e6f4; 
-  }
-  
-  .hero-content {
-    flex: 1;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-content p {
-    margin-bottom: 1.5rem;
-  }
-  
-  .hero-content button {
-    padding: 0.8rem 1.5rem;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .hero-image img {
-    max-width: 100%;
-    height: auto;
-  }
   
   /* Featured Restaurants */
   .featured {
@@ -88,14 +54,14 @@
     text-align: center;
   }
   
-  .restaurant-cards {
+   /*.restaurant-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
   }
   
-  .card {
+ .card {
     border: 1px solid #eee;
     padding: 1rem;
     border-radius: 8px;
@@ -106,7 +72,7 @@
     height: 180px;
     object-fit: cover;
     border-radius: 8px;
-  }
+  }*/
   
   .price {
     color: #4CAF50;
@@ -224,9 +190,9 @@
     margin: 0 auto;
   }
   
-  h1 {
+  /*h1 {
     text-align: left;
-  }
+  } *//* this is impacting all h1 */
   
   .filters {
     display: flex;
@@ -238,7 +204,7 @@
     font-size: 1rem;
   }
   
-  .restaurant-list {
+  /*.restaurant-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -269,6 +235,6 @@
   .restaurant-card ul li {
     font-size: 0.8rem;
     margin: 3px 0;
-  }
+  }*/
   
   
