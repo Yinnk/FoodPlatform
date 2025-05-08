@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { auth } from '../index.js'
 import { useNavigate } from 'react-router-dom'; 
 import './user-auth.css';
-
+import foodPic from '../assets/img/food.webp';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'; 
 
 
@@ -71,7 +71,7 @@ return (
       {/* Right Column */}
       <div className="col-12 col-md-6 p-0 d-none d-md-block">
         <img
-          src="./public/img/food.webp"
+          src={foodPic}
           alt="Food"
           className="img-fluid h-100 w-100 rounded"
           style={{ objectFit: 'cover' }}

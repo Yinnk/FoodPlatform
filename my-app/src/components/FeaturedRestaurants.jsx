@@ -1,10 +1,11 @@
 import React from 'react';
+import './featured-restaurants.css';
 
 const FeaturedRestaurants = () => {
   return (
     <section className="featured py-8">
       <h1 className="text-2xl font-bold mb-3 text-center">Featured Restaurants</h1>
-      <div className="restaurant-cards grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="feature-restaurant-cards grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="card bg-white rounded-xl shadow-md p-4">
           <img src="/imgs/poke.webp" alt="Meal 1" className="w-full h-40 object-cover rounded-md mb-2" />
           <h3 className="font-bold">Go Poke Mystery Box "Catch of the Day"</h3>

@@ -15,7 +15,6 @@ export function RestaurantPage() {
     const [showConfirmlModal, setShowConfirmModal] = useState(false);
 
     const handleCardClick = (restaurant) => {
-        console.log('Restaurant clicked:', restaurant); // Debugging step
         setSelectedRestaurant(restaurant);
         setShowDetailModal(true);
     };
@@ -31,11 +30,19 @@ export function RestaurantPage() {
 
     return (
         <div>
-            <Navbar />
-             <RestaurantHero />
-            {/* Pass handleCardClick function to CardGrid */}
-            <CardGrid onCardClick={handleCardClick} />
-            
+            <header>
+                <Navbar />
+            </header>
+
+            <main>
+                <RestaurantHero />
+                <CardGrid onCardClick={handleCardClick} />
+            </main>
+
+            <footer>
+                <Footer />
+            </footer>
+
             <RestaurantDetailModal
                 restaurant={selectedRestaurant}
                 show={showDetailModal}
@@ -49,12 +56,12 @@ export function RestaurantPage() {
                     setShowConfirmModal(true);
                 }}
             />
+
             <OrderConfirmationModal
                     order={orderConfirm}
                     show={showConfirmlModal}
                     onClose={() => setShowConfirmModal(false)}
-                />
-             <Footer />
+            />
         </div>
     );
 }

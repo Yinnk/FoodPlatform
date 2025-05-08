@@ -5,9 +5,9 @@ import glutenfreeIcon from '../assets/img/glutenfree.png';
 import veganIcon from '../assets/img/vegan.png';
 import halalIcon from '../assets/img/halal-sign.png';
 import nutfreeIcon from '../assets/img/walnut.png';
-import foodSurplusIconOrange from '../assets/img/star.png';
-import foodSurplusIconGreen from '../assets/img/stargreen.png';
-import foodSurplusIconRed from '../assets/img/starred.png';
+import foodSurplusIconOrange from '../assets/img/yellow-star.png';
+import foodSurplusIconGreen from '../assets/img/green-star.png';
+import foodSurplusIconRed from '../assets/img/red-star.png';
 import clock from '../assets/img/clock.png';
 
 //food surplus star icon color doesn't match the desired color now; need to find new correct color icon

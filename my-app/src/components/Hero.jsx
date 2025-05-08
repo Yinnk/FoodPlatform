@@ -1,4 +1,5 @@
 import React from 'react';
+import './restaurant-hero.css'
 
 const HeroSection = () => {
   return (
