@@ -8,22 +8,22 @@ export function FilterOptions({ setFilteredRestaurants, allRestaurants }) {
         glutenFree: '',
         halal: '',
         nutFree: '',
-        location: '',
+        cuisine: '',
         priceRange: ''
     });
 
-    // Realistic low-income / food desert locations in WA
-    const lowIncomeLocations = [
-        "Tukwila", 
-        "SeaTac", 
-        "White Center", 
-        "Kent", 
-        "Everett", 
-        "Renton", 
-        "South Park (Seattle)", 
-        "Rainier Beach (Seattle)", 
-        "Delridge (Seattle)", 
-        "Burien"
+    // Cuisine options
+    const cuisines = [
+        "East Asian",
+        "Southeast Asian",
+        "South Asian",
+        "European",
+        "American",
+        "Mediterranean",
+        "Latin American",
+        "Middle Eastern",
+        "African",
+        "Caribbean"
     ];
 
     // Price ranges
@@ -53,7 +53,7 @@ export function FilterOptions({ setFilteredRestaurants, allRestaurants }) {
             glutenFree: '',
             halal: '',
             nutFree: '',
-            location: '',
+            cuisine: '',
             priceRange: ''
         });
         setFilteredRestaurants(allRestaurants); // Reset to all restaurants
@@ -67,8 +67,8 @@ export function FilterOptions({ setFilteredRestaurants, allRestaurants }) {
             if (filters.halal && restaurant.halal !== filters.halal) return false;
             if (filters.nutFree && restaurant.nutFree !== filters.nutFree) return false;
 
-            // Location filter
-            if (filters.location && restaurant.location !== filters.location) return false;
+            // Cuisine filter
+            if (filters.cuisine && restaurant.cuisine !== filters.cuisine) return false;
 
             // Price range filter
             if (filters.priceRange) {
@@ -108,18 +108,18 @@ export function FilterOptions({ setFilteredRestaurants, allRestaurants }) {
                     </Accordion.Body>
                 </Accordion.Item>
 
-                {/* Location Filter */}
+                {/* Cuisine Filter */}
                 <Accordion.Item eventKey="1">
-                    <Accordion.Header>Location</Accordion.Header>
+                    <Accordion.Header>Cuisine</Accordion.Header>
                     <Accordion.Body>
                         <Form.Select
-                            name="location"
-                            value={filters.location}
+                            name="cuisine"
+                            value={filters.cuisine}
                             onChange={handleFilterChange}
                         >
-                            <option value="">All Locations</option>
-                            {lowIncomeLocations.map((location, index) => (
-                                <option key={index} value={location}>{location}</option>
+                            <option value="">All Cuisines</option>
+                            {cuisines.map((cuisine, index) => (
+                                <option key={index} value={cuisine}>{cuisine}</option>
                             ))}
                         </Form.Select>
                     </Accordion.Body>

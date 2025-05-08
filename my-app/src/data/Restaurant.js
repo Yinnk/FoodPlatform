@@ -7,6 +7,7 @@ export const restaurants = [
     {
       name: "Spice Bridge",
       type: "Food Hall",
+      cuisine: "South Asian",
       price: 15,
       image: spiceBridgeImg,
       description:"xxx",
@@ -21,6 +22,7 @@ export const restaurants = [
     {
       name: "Bai Tong Restaurant",
       type: "Thai",
+      cuisine: "Southeast Asian",
       price: 18,
       image: baiTongImg,
       description:"xxx",
@@ -35,6 +37,7 @@ export const restaurants = [
     {
       name: "Old Saigon",
       type: "Vietnamese",
+      cuisine: "Southeast Asian",
       price: 12,
       image: oldSaigonImg,
       description:"xxx",

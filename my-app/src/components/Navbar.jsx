@@ -39,6 +39,8 @@ const Navbar = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/restaurantpage">Restaurants</Link></li>
                         <li><Link to="/orderpage">Orders</Link></li>
+                        <li><Link to="/mappage">Map</Link></li>
+                        
 
                         {!user ? (
                             <li>
