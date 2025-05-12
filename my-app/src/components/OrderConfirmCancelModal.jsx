@@ -10,7 +10,7 @@ export function OrderConfirmationCancelModal({ order, show, onClose, onConfirm, 
         <>
             <div className="modal show d-block" tabIndex="-1" role="dialog">
                 <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm" role="document">
-                    <div className="modal-content ">
+                    <div className="modal-content shadow-lg ">
                         <div className="modal-header">
                             <button type="button" className="btn-close" onClick={onClose}></button>
                         </div>
@@ -28,7 +28,7 @@ export function OrderConfirmationCancelModal({ order, show, onClose, onConfirm, 
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-success btn-view-order mx-auto d-block" onClick={onConfirm}>Confirm</button>
-                            <button type="button" className="btn btn-success btn-view-order mx-auto d-block" onClick={onCancel}>Cancel</button>
+                            <button type="button" className="btn btn-danger btn-view-order mx-auto d-block" onClick={onCancel}>Cancel</button>
                         </div>
                     </div>
                 </div>

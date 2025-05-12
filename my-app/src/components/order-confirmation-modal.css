@@ -28,6 +28,14 @@
   display: block;
 }
 
+.warning-icon {
+  max-width: 250px;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
 
 .modal-header {
   border: none;  

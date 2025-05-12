@@ -25,7 +25,7 @@ export function RestaurantDetailModal({ restaurant, show, onClose, onOrder }) {
     return (
         <div className="modal show d-block" tabIndex="-1" role="dialog">
             <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable shadow-sm" role="document">
-                <div className="modal-content ">
+                <div className="modal-content shadow-lg ">
                     <div className="modal-header">
                         <h5 className="modal-title">Restaurant Details</h5> {/* adding this header for close button. if over a dark img, close button can't show to show.  */}
                         <button type="button" className="btn-close" odata-bs-dismiss="modal" aria-label="Close" onClick={onClose}></button>
