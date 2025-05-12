@@ -14,7 +14,7 @@ export function OrderConfirmationModal({ order, show, onClose }) {
     return (
         <div className="modal show d-block" tabIndex="-1" role="dialog">
             <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm" role="document">
-                <div className="modal-content ">
+                <div className="modal-content shadow-lg ">
                     <div className="modal-header">
                         <button type="button" className="btn-close" onClick={onClose}></button>
                     </div>
@@ -29,7 +29,7 @@ export function OrderConfirmationModal({ order, show, onClose }) {
                         )}
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-success btn-view-order mx-auto d-block" onClick={handleGoOrder}>View Order</button>
+                        <button type="button" className="btn btn-primary btn-view-order mx-auto d-block" onClick={handleGoOrder}>View Order</button>
                     </div>
                 </div>
             </div>
