@@ -9,13 +9,15 @@ import { OrderConfirmationModal } from "../components/OrderConfirmationModal.jsx
 import Navbar from '../components/Navbar'; 
 import Footer from '../components/Footer';
 import RestaurantHero from '../components/RestaurantHero.jsx';
+import { OrderConfirmationCancelModal } from '../components/OrderConfirmCancelModal.jsx';
 
 export function RestaurantPage() {
     const [selectedRestaurant, setSelectedRestaurant] = useState(null);
-    const [showDetailModal, setShowDetailModal] = useState(false);
-    const [orderConfirm, setOrderConfirm] = useState(null);
-    const [showConfirmlModal, setShowConfirmModal] = useState(false);
-
+    const [showDetailModal, setShowDetailModal] = useState(false); //for restaurant detail modal
+    const [order, setOrder] = useState(null);
+    const [showConfirmModal, setShowConfirmModal] = useState(false); //for order confirmation modal
+    const [showCancelModal, setShowCancelModal] = useState(false);  //for order confirmation/cancel modal
+    
     const [user, setUser] = useState(null);
     const [showPopup, setShowPopup] = useState(false);
     const navigate = useNavigate();
@@ -87,21 +89,41 @@ export function RestaurantPage() {
                 restaurant={selectedRestaurant}
                 show={showDetailModal}
                 onClose={() => setShowDetailModal(false)}
-                onOrderConfirm={(restaurant) => {
-                    setOrderConfirm({
+                onOrder={(restaurant) => {
+                    setOrder({
                         restaurant: restaurant.name,
                         pickUpTime: restaurant.pickUpTime,
                     });
                     setShowDetailModal(false);
-                    setShowConfirmModal(true);
+                    setShowCancelModal(true); // this opens the "Confirm or Cancel" modal
+                }}
+                
+            />
+
+            <OrderConfirmationCancelModal
+                show={showCancelModal}
+                order={selectedRestaurant}
+                onClose={() => setShowCancelModal(false)} // fallback close
+                onConfirm={() => {
+                    setShowCancelModal(false);       // hide cancel/confirm modal
+                    setShowConfirmModal(true);       // show final confirmation modal
+                }}
+                onCancel={() => {
+                    setShowCancelModal(false);       // just close
+                    setOrder(null);                  // clear the order
                 }}
             />
 
             <OrderConfirmationModal
-                order={orderConfirm}
-                show={showConfirmlModal}
-                onClose={() => setShowConfirmModal(false)}
+                order={order}
+                show={showConfirmModal}
+                onClose={() => {
+                    setShowConfirmModal(false);
+                }}
             />
+
+
+            
         </div>
     );
 }

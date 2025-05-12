@@ -76,18 +76,10 @@ button {
   transition: border-color 0.25s;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6c98cacc92af9bbe48f80d2423e4eb654a6fc899
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 6c98cacc92af9bbe48f80d2423e4eb654a6fc899
 
 .btn-order {
   background-color: #0c1c3d;
