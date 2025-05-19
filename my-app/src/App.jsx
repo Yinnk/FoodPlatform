@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HomePage } from './pages/HomePage.jsx';
 import  {RestaurantPage} from './pages/RestaurantPage.jsx';
 
+import { OrderCardGrid } from './components/OrderCardGrid.jsx';
+import { OrderPage } from './pages/OrderPage.jsx';
 
 function App() {
 
@@ -16,7 +18,9 @@ function App() {
        <Route path="/" element={<HomePage />} />
        <Route path="/signin" element={<SignInPage />} /> 
        <Route path="/restaurantpage" element={<RestaurantPage />} />   
-        <Route path="/orderpage" element={<h1>Order Page</h1>} />{/* place holder for order page */}
+        <Route path="/ordercard" element={<OrderCardGrid />} />{/* place holder for order card */}
+        <Route path="/orderpage" element={<OrderPage />} />{/* place holder for order card */}
+
        </Routes>
      </BrowserRouter>
    );
