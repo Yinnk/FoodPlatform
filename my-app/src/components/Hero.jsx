@@ -45,7 +45,7 @@ const HeroSection = () => {
         </button>
       </div>
       <div className="hero-image md:w-1/2">
-        <img src="/imgs/veggies.jpg" alt="Fresh Vegetables" className="rounded-xl shadow-lg w-full" />
+        <img src="/imgs/veggies.jpg" alt="Fresh Vegetables" className="rounded shadow-lg mx-1" />
       </div>
     </section>
   );
