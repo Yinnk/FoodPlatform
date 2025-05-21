@@ -99,9 +99,11 @@ export function RestaurantPage() {
                 onClose={() => setShowCancelModal(false)} // fallback close
                 onConfirm={() => {
                     saveOrderToLocalStorage({
-                      ... selectedRestaurant,
+                        ...selectedRestaurant,
+                        id: Date.now().toString(), // generate a unique ID
                         pickedUp: false,
-                    });
+                      });
+                      
                     setShowCancelModal(false);       // hide cancel/confirm modal
                     setShowConfirmModal(true);       // show final confirmation modal
                   }}
