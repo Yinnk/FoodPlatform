@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../index.js';
-
+import { useLocation } from 'react-router-dom';
 import { CardGrid } from "../components/CardGrid.jsx";
 import { RestaurantDetailModal } from "../components/RestaurantModal.jsx";
 import { OrderConfirmationModal } from "../components/OrderConfirmationModal.jsx";
@@ -10,6 +10,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import RestaurantHero from '../components/RestaurantHero.jsx';
 import { OrderConfirmationCancelModal } from '../components/OrderConfirmCancelModal.jsx';
+import  SignInAlert from '../components/SignInAlert.jsx';
 
 export function RestaurantPage() {
     const [selectedRestaurant, setSelectedRestaurant] = useState(null);
@@ -21,6 +22,14 @@ export function RestaurantPage() {
     const [user, setUser] = useState(null);
     const [showPopup, setShowPopup] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state?.restaurant) {
+            setSelectedRestaurant(location.state.restaurant);
+            setShowDetailModal(true);
+        }
+    }, [location.state]);
 
     useEffect(() => {
         const unsub = onAuthStateChanged(auth, (currentUser) => {
@@ -40,35 +49,18 @@ export function RestaurantPage() {
 
     if (showPopup) {
         return (
-            <div style={{
-                position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-                background: 'rgba(0,0,0,0.6)', display: 'flex',
-                alignItems: 'center', justifyContent: 'center', zIndex: 9999
-            }}>
-                <div style={{
-                    background: 'white', padding: '2rem', borderRadius: '1rem',
-                    textAlign: 'center', maxWidth: '400px'
-                }}>
-                    <h2 style={{ color: '#003559' }}>Access Restricted</h2>
-                    <p>You must be signed in to view this page.</p>
-                    <button
-                        onClick={() => navigate('/signin')}
-                        style={{
-                            marginTop: '1rem',
-                            padding: '0.6rem 1.2rem',
-                            backgroundColor: '#003559',
-                            color: 'white',
-                            border: 'none',
-                            borderRadius: '8px',
-                            cursor: 'pointer'
-                        }}
-                    >
-                        Go to Sign In
-                    </button>
-                </div>
-            </div>
+            <SignInAlert /> // alert if users is not logged in
         );
     }
+
+
+    const saveOrderToLocalStorage = (order) => {
+        console.log("Saving to localStorage:", order);
+        const existingOrders = JSON.parse(localStorage.getItem('orders')) || [];
+        existingOrders.push(order);
+        localStorage.setItem('orders', JSON.stringify(existingOrders));
+      };
+      
 
     return (
         <div>
@@ -90,6 +82,7 @@ export function RestaurantPage() {
                 show={showDetailModal}
                 onClose={() => setShowDetailModal(false)}
                 onOrder={(restaurant) => {
+                    setSelectedRestaurant(restaurant);
                     setOrder({
                         restaurant: restaurant.name,
                         pickUpTime: restaurant.pickUpTime,
@@ -105,9 +98,15 @@ export function RestaurantPage() {
                 order={selectedRestaurant}
                 onClose={() => setShowCancelModal(false)} // fallback close
                 onConfirm={() => {
+                    saveOrderToLocalStorage({
+                        ...selectedRestaurant,
+                        id: Date.now().toString(), // generate a unique ID
+                        pickedUp: false,
+                      });
+                      
                     setShowCancelModal(false);       // hide cancel/confirm modal
                     setShowConfirmModal(true);       // show final confirmation modal
-                }}
+                  }}
                 onCancel={() => {
                     setShowCancelModal(false);       // just close
                     setOrder(null);                  // clear the order
