@@ -35,7 +35,7 @@ const Navbar = () => {
       <header className="navbar bg-white shadow-md">
         <div className="nav-container flex justify-between items-center px-6 py-4">
           <div className="logo text-xl font-bold text-green-600">
-            <Link to="/">AppName</Link>
+            <Link to="/" className="logo-text">Bite Connect</Link>
           </div>
 
           <nav>

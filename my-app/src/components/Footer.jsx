@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h4>APP NAME</h4>
+          <h4>BITE CONNECT</h4>
           <p>
             Reducing food waste,<br />
             Supporting communities,<br />
@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        Copyright © APP NAME 2025. All Rights Reserved.
+        Copyright © BITE CONNECT 2025. All Rights Reserved.
       </div>
     </footer>
   );

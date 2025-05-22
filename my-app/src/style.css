@@ -28,6 +28,18 @@ body {
   gap: 1rem;
 }
 
+.logo-text {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  color: #0c1c3d; 
+  text-decoration: none;
+}
+
+.logo-text:hover {
+  color: #0c1c3d;  
+}
+
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
