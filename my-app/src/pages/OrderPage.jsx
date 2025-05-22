@@ -39,8 +39,8 @@ export function OrderPage() {
             {/* Hero Section : need to change the layout*/}
             <section className="hero-section" style={{ padding: '4rem 2rem', textAlign: 'center', backgroundColor: '#f8f9fa' }}>
                 <h1 className="hero-header">Order History</h1>
-                <h2 className="hero-subtitle" style={{ fontWeight: 'normal', marginTop: '1rem', textAlign:'left'}}>Track, review, and manage your past and current orders.</h2>
-                <p className="hero-description" style={{ maxWidth: '800px', margintop: '1rem auto' , textAlign:'left'}}>
+                <h2 className="hero-subtitle" style={{ fontWeight: 'normal', marginTop: '1rem', textAlign:'left', textTransform:'uppercase'}}>Track, review, and manage your past and current orders.</h2>
+                <p className="hero-description" style={{ maxWidth: 'auto', marginTop: '1rem auto' , textAlign:'left',  fontSize: '1.2rem'}}>
                 Stay on top of your surprise box reservations! View your upcoming orders, check their status, and revisit meals you've enjoyed. From tracking today’s meal to reordering your favorites, everything you need is here.
                 </p>
             </section>

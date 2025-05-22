@@ -2,8 +2,10 @@
 import { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-
+import { useNavigate } from 'react-router-dom';
 import { restaurants } from '../data/Restaurant.js';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
 const metroFlexZones = [
   // Tukwila
@@ -62,6 +64,18 @@ const metroFlexZones = [
 
 
 export default function Map() {
+
+  const navigate = useNavigate();
+  const DefaultIcon = L.icon({
+    iconUrl: markerIcon,
+    shadowUrl: markerShadow,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41],
+  });
+  L.Marker.prototype.options.icon = DefaultIcon;
+
   useEffect(() => {
     if (!document.getElementById('map')._leaflet_id) {
       const map = L.map('map').setView([47.4747, -122.2759], 13); // Center near Tukwila
@@ -78,7 +92,7 @@ export default function Map() {
         }).addTo(map).bindPopup("Metro Flex Coverage Area");
       });
 
-      restaurants.forEach(restaurant => {
+      restaurants.forEach((restaurant, index) => {
         let coordinates;
         switch (restaurant.name) {
           case "Spice Bridge":
@@ -140,6 +154,7 @@ export default function Map() {
         }
 
         const marker = L.marker(coordinates).addTo(map);
+        const buttonId = `learn-more-${index}`;
         marker.bindPopup(`
           <div style="text-align: center;">
             <img src="${restaurant.image}" alt="${restaurant.name}" width="100px" style="border-radius: 8px;" /><br/>
@@ -147,19 +162,30 @@ export default function Map() {
             Type: ${restaurant.type}<br>
             Price: $${restaurant.price}<br>
             Food Surplus: ${restaurant.foodSurplus}<br>
-            <a href="/RestaurantPage"
-              style="margin-top: 5px; display: inline-block; padding: 5px 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+            <button id="${buttonId}" style="margin-top: 5px; padding: 5px 10px; background-color: #003559; color: white; border: none; border-radius: 5px; cursor: pointer;">
               Learn More
-            </a>
+            </button>
           </div>
         `);
+
+        marker.on('popupopen', () => {
+          setTimeout(() => {
+            const button = document.getElementById(buttonId);
+            if (button) {
+              button.addEventListener('click', () => {
+                navigate('/restaurantpage', { state: { restaurant } });
+              });
+            }
+          }, 0); // Delay to ensure DOM is ready
+        });
       });
+
 
 
       // Enable zoom and pan
       map.scrollWheelZoom.enable();
     }
-  }, []);
+  }, [navigate]);
 
   return <div id="map" style={{ height: '400px', width: '100%' }} />;
 }

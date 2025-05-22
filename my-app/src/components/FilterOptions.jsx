@@ -36,13 +36,19 @@ export function FilterOptions({ setFilteredRestaurants, allRestaurants }) {
     ];
 
     const handleFilterChange = (e) => {
-        const { name, value } = e.target;
+        const { name, value, type } = e.target;
+
         setFilters(prevFilters => {
-            // Toggle the filter value on and off
-            if (prevFilters[name] === value) {
-                return { ...prevFilters, [name]: '' };
-            } else {
+            if (type === 'select-one') {
+                // For select inputs, just set the value (no toggle)
                 return { ...prevFilters, [name]: value };
+            } else {
+                // For checkboxes, toggle on/off
+                if (prevFilters[name] === value) {
+                    return { ...prevFilters, [name]: '' };
+                } else {
+                    return { ...prevFilters, [name]: value };
+                }
             }
         });
     };
@@ -60,6 +66,7 @@ export function FilterOptions({ setFilteredRestaurants, allRestaurants }) {
     };
 
     const applyFilters = () => {
+
         const filtered = allRestaurants.filter(restaurant => {
             // Dietary filters
             if (filters.vegan && restaurant.vegan !== filters.vegan) return false;
@@ -68,7 +75,7 @@ export function FilterOptions({ setFilteredRestaurants, allRestaurants }) {
             if (filters.nutFree && restaurant.nutFree !== filters.nutFree) return false;
 
             // Cuisine filter
-            if (filters.cuisine && restaurant.cuisine !== filters.cuisine) return false;
+            if (filters.cuisine && restaurant.type !== filters.cuisine) return false;
 
             // Price range filter
             if (filters.priceRange) {
