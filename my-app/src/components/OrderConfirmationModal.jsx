@@ -10,6 +10,7 @@ export function OrderConfirmationModal({ order, show, onClose }) {
     const handleGoOrder = () => {
         navigate('/orderpage'); // navigate to the order page
       }
+
     
     return (
         <div className="modal show d-block" tabIndex="-1" role="dialog">
@@ -29,7 +30,9 @@ export function OrderConfirmationModal({ order, show, onClose }) {
                         )}
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-primary btn-view-order mx-auto d-block" onClick={handleGoOrder}>View Order</button>
+                        <button type="button" className="btn  btn-primary btn-view-order mx-auto d-block" onClick={handleGoOrder}>View Order</button>
+                        <button type="button" className="btn btn-primary btn-view-order mx-auto d-block" onClick={onClose}>View Restaurant</button>
+
                     </div>
                 </div>
             </div>

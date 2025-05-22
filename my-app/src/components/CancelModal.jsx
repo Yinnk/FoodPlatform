@@ -14,7 +14,7 @@ export function CancelModal({ order, show, onClose, onConfirm }) {
         setTimeout(() => {
             setConfirmed(false);  // Reset
             onClose();            // Close modal after showing success
-        }, 1500);
+        }, 1800);
     };
           
     return (
