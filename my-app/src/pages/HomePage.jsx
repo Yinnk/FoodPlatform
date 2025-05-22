@@ -7,6 +7,8 @@ import Mission from '../components/Mission';
 import Partners from '../components/Partners';
 import Footer from '../components/Footer';
 
+
+
 export function HomePage(props) {
   return (
     <div>
