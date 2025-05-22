@@ -2,6 +2,9 @@
 import { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
 import { restaurants } from '../data/Restaurant.js';
 
@@ -68,6 +71,18 @@ export default function Map() {
         attribution: '&copy; OpenStreetMap contributors',
       }).addTo(map);
 
+      const icon = L.icon({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
+
+L.Marker.prototype.options.icon = icon;
+
       metroFlexZones.forEach(zone => {
         L.polygon(zone, {
           color: 'blue',
@@ -75,6 +90,8 @@ export default function Map() {
           fillOpacity: 0.2,
         }).addTo(map).bindPopup("Metro Flex Coverage Area");
       });
+
+      
 
       restaurants.forEach(restaurant => {
         let coordinates;
