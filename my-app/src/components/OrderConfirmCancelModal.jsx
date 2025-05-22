@@ -19,7 +19,7 @@ export function OrderConfirmationCancelModal({ order, show, onClose, onConfirm, 
                                 <>
                                     <img src={warningIcon} alt="cart icon" className="warning-icon" />
                                     <p className="confirmation-text">
-                                        Are you sure you want to order a surprise box from {order.restaurant} for pick up on {order.pickUpTime}?
+                                        Are you sure you want to order a surprise box from {order.name} for pick up on {order.pickUpTime}?
                                     </p>
                                 </>
                             ) : (

@@ -150,7 +150,14 @@ button:focus-visible {
 
 .list-group-item {
   border: none !important;
-  padding: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
   color: #003559;
 }
 
+/* In your modal.css or inside a <style> tag */
+.modal.show.d-block {
+  z-index: 9999 !important;
+  display: block !important;
+  background-color: rgba(0, 0, 0, 0.6);
+}

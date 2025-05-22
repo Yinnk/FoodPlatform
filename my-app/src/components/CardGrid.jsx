@@ -13,6 +13,11 @@ export function CardGrid({ onCardClick }) {
     return (
         <div className="container mt-4">
             <FilterOptions setFilteredRestaurants={setFilteredRestaurants} allRestaurants={allRestaurants} />
+            {filteredRestaurants.length === 0 && (
+                <div className="text-center mt-4">
+                    <h5>No restaurants found matching your criteria.</h5>
+                </div>
+            )}
             <div className="row g-4 m-3">
                 {filteredRestaurants.map((restaurant, index) => (
                     <div key={index} className="col-12 col-md-6 mb-4">
