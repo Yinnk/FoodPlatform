@@ -2,64 +2,61 @@
 import { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
-import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
 import { restaurants } from '../data/Restaurant.js';
 
-// Metro Flex coverage zones (mocked coordinates for Tukwila, WA area)
 const metroFlexZones = [
-  // Tukwila 
+  // Tukwila
   [
-    [47.4800, -122.3000],
-    [47.4800, -122.2600],
-    [47.4600, -122.2600],
-    [47.4600, -122.3000]
+    [47.4850, -122.3100],
+    [47.4850, -122.2500],
+    [47.4550, -122.2500],
+    [47.4550, -122.3100]
   ],
   // Renton 
   [
-    [47.5000, -122.2250],
-    [47.5000, -122.1900],
-    [47.4700, -122.1900],
-    [47.4700, -122.2250]
+    [47.5050, -122.2350],
+    [47.5050, -122.1800],
+    [47.4650, -122.1800],
+    [47.4650, -122.2350]
   ],
-  // Kent 
+  // Kent
   [
-    [47.4100, -122.2450],
-    [47.4100, -122.2000],
-    [47.3750, -122.2000],
-    [47.3750, -122.2450]
+    [47.4150, -122.2550],
+    [47.4150, -122.1900],
+    [47.3700, -122.1900],
+    [47.3700, -122.2550]
   ],
   // South Seattle 
   [
-    [47.5500, -122.3000],
-    [47.5500, -122.2600],
-    [47.5200, -122.2600],
-    [47.5200, -122.3000]
+    [47.5550, -122.3100],
+    [47.5550, -122.2500],
+    [47.5150, -122.2500],
+    [47.5150, -122.3100]
   ],
   // Issaquah 
   [
-    [47.5500, -122.0600],
-    [47.5500, -122.0200],
-    [47.5250, -122.0200],
-    [47.5250, -122.0600]
+    [47.5550, -122.0700],
+    [47.5550, -122.0100],
+    [47.5200, -122.0100],
+    [47.5200, -122.0700]
   ],
   // Bothell 
   [
-    [47.8000, -122.2200],
-    [47.8000, -122.1800],
-    [47.7750, -122.1800],
-    [47.7750, -122.2200]
+    [47.8050, -122.2300],
+    [47.8050, -122.1700],
+    [47.7700, -122.1700],
+    [47.7700, -122.2300]
   ],
   // Kirkland 
   [
-    [47.7350, -122.2250],
-    [47.7350, -122.1850],
-    [47.7050, -122.1850],
-    [47.7050, -122.2250]
+    [47.7400, -122.2350],
+    [47.7400, -122.1750],
+    [47.7000, -122.1750],
+    [47.7000, -122.2350]
   ]
 ];
+
 
 
 
@@ -73,18 +70,6 @@ export default function Map() {
         attribution: '&copy; OpenStreetMap contributors',
       }).addTo(map);
 
-      const icon = L.icon({
-  iconUrl: markerIcon,
-  iconRetinaUrl: markerIcon2x,
-  shadowUrl: markerShadow,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
-});
-
-L.Marker.prototype.options.icon = icon;
-
       metroFlexZones.forEach(zone => {
         L.polygon(zone, {
           color: 'blue',
@@ -92,8 +77,6 @@ L.Marker.prototype.options.icon = icon;
           fillOpacity: 0.2,
         }).addTo(map).bindPopup("Metro Flex Coverage Area");
       });
-
-      
 
       restaurants.forEach(restaurant => {
         let coordinates;
@@ -111,10 +94,10 @@ L.Marker.prototype.options.icon = icon;
             coordinates = [47.5342, -122.2803];
             break;
           case "Little Jaye":
-            coordinates = [47.5267, -122.3261];
+            coordinates = [47.5267, -122.3061];
             break;
           case "El Rey Peruvian Restaurant":
-            coordinates = [47.5246, -122.3147];
+            coordinates = [47.5246, -122.3047];
             break;
           case "Clove Indian Cuisine":
             coordinates = [47.4936, -122.2046];
