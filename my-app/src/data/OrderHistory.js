@@ -19,18 +19,19 @@ export const OrderHistory = [
     pickedUp: true
   },
   {
-    id: 2,
-    name: "Old Saigon-past ",
-    type: "Vietnamese",
-    cuisine: "Southeast Asian",
-    price: 12,
-    image: oldSaigonImg,
-    location: "971 Industry Drive, Tukwila, WA",
-    pickUpTime: "3:30 PM - 5:30 PM",
-    vegan: "Vegan",
+    name: "Bai Tong Restaurant",
+    type: "Southeast Asian",
+    price: 18,
+    image: baiTongImg,
+    description:"Thai eatery serving flavorful curries, noodles, and more in a vibrant, stylish setting.",
+    location: "16876 Southcenter Parkway, Tukwila, WA",
+    pickUpTime: "5:00 PM - 7:00 PM",
+    foodSurplus: "Medium", // UI maps this to orange star/icon
+    vegan: "Not Vegan",
     glutenFree: "Gluten-Free",
     halal: "Contains Non-Halal Items",
     nutFree: "Contains Nuts",
     pickedUp: true
-  }
+  },
+  
 ];
