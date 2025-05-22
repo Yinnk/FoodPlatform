@@ -16,6 +16,8 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Need Help?</h4>
           <a href="#">Contact Us</a>
+          <a href="#">206-737-6721</a>
+          <a href="#">biteconnect@gmail.com</a>
         </div>
         <div className="footer-section">
           <h4>Follow us</h4>

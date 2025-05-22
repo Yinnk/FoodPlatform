@@ -38,9 +38,27 @@ export function MySignInScreen() {
 
 return (
   <div className="container-fluid min-vh-100 d-flex align-items-center justify-content-center">
-    <div className="row g-4 m-5 rounded overflow-hidden" >
+    <div className="row g-4 m-5 rounded overflow-hidden">
+      
       {/* Left Column */}
-      <div className="col-12 col-md-6 p-5 d-flex flex-column justify-content-center">
+      <div className="col-12 col-md-6 p-5 d-flex flex-column justify-content-center position-relative">
+        {/* X Close Button */}
+        <button
+          onClick={handleGoHome}
+          style={{
+            position: 'absolute',
+            top: '20px',
+            right: '20px',
+            background: 'transparent',
+            border: 'none',
+            fontSize: '1.5rem',
+            cursor: 'pointer',
+          }}
+          aria-label="Close"
+        >
+          &times;
+        </button>
+
         <div className="auth-content">
           {isSignedIn ? (
             <>
