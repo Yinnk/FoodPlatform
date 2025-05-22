@@ -36,7 +36,7 @@ export function OrderCard({ restaurant, onCancel }) {
                         <div className="list-group-item d-flex align-items-center text-danger fw-bold">
                             STATUS: Canceled
                         </div>
-                        <div className="list-group-item d-flex align-items-center">
+                        <div className="list-group-item d-flex align-items-center mb-3">
                             ORDER TOTAL: ${restaurant.price}
                         </div>
                     </div>
@@ -46,7 +46,7 @@ export function OrderCard({ restaurant, onCancel }) {
             return (
                 <>
                     <div className="list-group">
-                        <div className="list-group-item d-flex align-items-center">
+                        <div className="list-group-item d-flex align-items-center fw-bold">
                             STATUS: Ordered
                         </div>
                         <div className="list-group-item d-flex align-items-center">
