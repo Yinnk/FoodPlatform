@@ -1,6 +1,5 @@
 import spiceBridgeImg from "../assets/img/spice-bridge.png";
 import baiTongImg from "../assets/img/bai-tong.jpg";
-import oldSaigonImg from "../assets/img/old-saigon.png";
 
 export const OrderHistory = [
   {
@@ -12,6 +11,7 @@ export const OrderHistory = [
     image: spiceBridgeImg,
     location: "14200 Tukwila International Blvd, Tukwila, WA",
     pickUpTime: "4:00 PM - 6:00 PM",
+    foodSurplus: "High", 
     vegan: "Vegan",
     glutenFree: "Gluten-Free",
     halal: "Halal",
