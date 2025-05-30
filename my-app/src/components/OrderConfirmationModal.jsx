@@ -31,7 +31,7 @@ export function OrderConfirmationModal({ order, show, onClose }) {
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn  btn-primary btn-view-order mx-auto d-block" onClick={handleGoOrder}>View Order</button>
-                        <button type="button" className="btn btn-primary btn-view-order mx-auto d-block" onClick={onClose}>View Restaurant</button>
+                        <button type="button" className="btn btn-primary btn-view-order mx-auto d-block" onClick={onClose}>View All Restaurant</button>
 
                     </div>
                 </div>
