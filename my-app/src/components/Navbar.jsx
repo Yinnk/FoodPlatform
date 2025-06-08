@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from '../index.js';
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import iconImg from '../assets/img/icon.png'; 
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
@@ -19,7 +20,7 @@ const Navbar = () => {
     try {
       await signOut(auth);
       setUser(null);
-      setShowLogoutPopup(true); // Show success popup
+      setShowLogoutPopup(true);
     } catch (error) {
       console.error("Logout failed:", error);
     }
@@ -34,7 +35,12 @@ const Navbar = () => {
     <>
       <header className="navbar bg-white shadow-md">
         <div className="nav-container flex justify-between items-center px-6 py-4">
-          <div className="logo text-xl font-bold text-green-600">
+          <div className="logo flex items-center space-x-2 text-xl font-bold text-green-600">
+          <img
+            src={iconImg}
+            alt="Bite Connect Icon"
+            style={{ width: '60px', height: '60px', objectFit: 'contain' }}
+          />
             <Link to="/" className="logo-text">Bite Connect</Link>
           </div>
 

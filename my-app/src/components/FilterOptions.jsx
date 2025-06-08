@@ -12,6 +12,13 @@ export function FilterOptions({ setFilteredRestaurants, allRestaurants }) {
         priceRange: ''
     });
 
+    const dietaryOptions = [
+    { key: 'vegan', label: 'Vegan' },
+    { key: 'glutenFree', label: 'Gluten-Free' },
+    { key: 'halal', label: 'Halal' },
+    { key: 'nutFree', label: 'Nut-Free' }
+];
+
     // Cuisine options
     const cuisines = [
         "East Asian",
@@ -90,9 +97,15 @@ export function FilterOptions({ setFilteredRestaurants, allRestaurants }) {
 
     return (
         <Container className="filter-container mb-4">
-            <Button variant="secondary" className="mb-3" onClick={clearFilters}>
+            <div className="d-flex justify-content-start gap-2 mb-3">
+            <Button variant="secondary" onClick={clearFilters}>
                 Clear Filters
             </Button>
+            <Button variant="primary" onClick={applyFilters}>
+                Apply Filters
+            </Button>
+            </div>
+
 
             <Accordion defaultActiveKey="0">
                 {/* Dietary Restrictions */}
@@ -100,17 +113,18 @@ export function FilterOptions({ setFilteredRestaurants, allRestaurants }) {
                     <Accordion.Header>Dietary Restrictions</Accordion.Header>
                     <Accordion.Body>
                         <Form>
-                            {['Vegan', 'Gluten-Free', 'Halal', 'Nut-Free'].map((restriction, index) => (
+                            {dietaryOptions.map(({ key, label }, index) => (
                                 <Form.Check
                                     key={index}
                                     type="checkbox"
-                                    label={restriction}
-                                    name={restriction.toLowerCase().replace('-', '')}
-                                    value={restriction}
-                                    checked={filters[restriction.toLowerCase().replace('-', '')] === restriction}
+                                    label={label}
+                                    name={key}
+                                    value={label}
+                                    checked={filters[key] === label}
                                     onChange={handleFilterChange}
                                 />
                             ))}
+
                         </Form>
                     </Accordion.Body>
                 </Accordion.Item>
@@ -153,9 +167,7 @@ export function FilterOptions({ setFilteredRestaurants, allRestaurants }) {
                 </Accordion.Item>
             </Accordion>
 
-            <Button variant="primary" className="mt-3" onClick={applyFilters}>
-                Apply Filters
-            </Button>
+            
         </Container>
     );
 }

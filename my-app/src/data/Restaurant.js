@@ -16,6 +16,9 @@ import seoulImg from '../assets/img/seoul.jpg';
 import salimaImg from '../assets/img/salima.jpg';
 import tasteImg from '../assets/img/taste.png';
 import mazaImg from '../assets/img/maza.png';
+import pokeImg from '../assets/img/poke.webp';
+import kitandaImg from '../assets/img/kitanda.jpeg';
+
 
 
 
@@ -263,14 +266,41 @@ export const restaurants = [
       type: "East Asian",
       price: 21,
       image: stoneImg,
-      description:"Introducing authentic Korean food to to community while providing the best customer service and the community welcomed us with open arms.",
+      description: "Introducing authentic Korean food to the community while providing the best customer service.",
       location: "24032 Bothell Everett Hwy #400, Bothell, WA",
       pickUpTime: "5:30 PM - 6:30 PM",
-      foodSurplus: "Low", // UI maps this to red star/icon
+      foodSurplus: "Low",
+      vegan: "Not Vegan",
+      glutenFree: "Gluten-Free",
+      halal: "Contains Non-Halal Items",
+      nutFree: "Contains Nuts"
+    },
+    {
+      name: "Go Poke",
+      type: "East Asian",
+      price: 18,
+      image: pokeImg,
+      description: "Authentic Hawaiian poke with a fresh twist and bold flavor.",
+      location: "24032 Bothell Everett Hwy #400, Bothell, WA",
+      pickUpTime: "4:30 PM - 6:30 PM",
+      foodSurplus: "Low",
+      vegan: "Not Vegan",
+      glutenFree: "Gluten-Free",
+      halal: "Contains Non-Halal Items",
+      nutFree: "Contains Nuts"
+    },
+    {
+      name: "Kitanda Espresso & Açaí",
+      type: "South American",
+      price: 21,
+      image: kitandaImg,
+      description: "Healthy açaí bowls and Brazilian cheese bread served with warm hospitality.",
+      location: "24032 Bothell Everett Hwy #400, Bothell, WA",
+      pickUpTime: "5:30 PM - 6:30 PM",
+      foodSurplus: "Low",
       vegan: "Not Vegan",
       glutenFree: "Gluten-Free",
       halal: "Contains Non-Halal Items",
       nutFree: "Contains Nuts"
     }
-    
   ];
